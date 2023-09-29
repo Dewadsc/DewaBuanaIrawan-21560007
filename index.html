@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dewa Meet</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="shortcut icon" href="img/fav.ico">
+    </head>
+    <body>
+        <nav class="topnav" id="myTopnav">
+            <a href="#" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="meet/index.html">Meet</a>
+            <a href="#contact">Contact</a>
+            <a href="javascript:void(0);" class="icon" onclick="navBar()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+
+        <section>
+            <div id="home">
+                <div class="kirihome">
+                    <img src="img/logo.png" />
+                </div>
+                <div class="kananhome">
+                    <div class="layout-pembungkus-kananhome">
+                        <h2 class="animationTyping">Welcome to website Dewa Meet</h2>
+                        <div class="garis"></div>
+                        <p>panggilan hebat yang menyatukan tenaga kerja global dan pelanggan Anda di mana saja, menggunakan perangkat apa saja, dan di lingkungan apa pun</p>
+                        <br/>
+                        <a href="meet/index.html" class="tombol-meet-home">
+                            <font>Meet Baru</font>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div id="about">
+                <div class="reveal fade-left">
+                    <div class="kiriabout">
+                        <img src="img/about.jpg" />
+                    </div>
+                    <div class="kananabout">
+                        <p>
+                            Website ini menyediakan layanan sebuah meet yang mudah diakses dan juga mudah untuk digunakan.
+                            Akan tetapi layanan website ini hanya dapat digunakan untuk meet dengan orang yang satu jaringan
+                            dengan kita, Loh kenapa bisa gitu? Untuk dapat mengetahui lebih jelas silahkan anda klik
+                            <a href="about/index.html">Baca Selengkap...</a> agar dapat memahami cara kerja dari Website Dewa Meet.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div id="contact">
+                <div class="kiricontact">
+                    <form>
+                        <h2>Contact US</h2>
+                        <input type="text" placeholder="Nama" />
+                        <br/>
+                        <input type="text" placeholder="Nomor Telpon" />
+                        <br/>
+                        <input type="email" placeholder="Email" />
+                        <br/>
+                        <textarea style="height: 150px;" placeholder="Pesan anda..."></textarea>
+                        <br/>
+                        <input type="submit" value="submit" onclick="btnPesan()" />
+                    </form>
+                </div>
+                <div class="kanancontact">
+                    <div class="isi">
+                        <div class="box-kecil-pelengkap"></div>
+                        <div class="paragraf" style="padding-left: 10%; padding-right: 10%;">
+                            <h3>INFO</h3>
+                            <p style="letter-spacing: 1px; line-height: 25px;">
+                                Jangan lupa follow sosial media kami untuk mengetahui project project dan event
+                                yang akan kami ada kan di setiap sabtu dan minggu nya.
+                            </p>
+                        </div>
+                        <br/>
+                        <ul>
+                            <li><a href="http://wa.me/6285781548584"><img src="img/whatsapp.png" /></a></li>
+                            <li><a href="http://wa.me/6285781548584">085781548584</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="https://www.youtube.com/@dstartup9210"><img src="img/youtube.png" /></a></li>
+                            <li><a href="https://www.youtube.com/@dstartup9210">D'Startup</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="https://www.instagram.com/dewadsc0401/"><img src="img/instagram.png" /></a></li>
+                            <li><a href="https://www.instagram.com/dewadsc0401/">dewadsc0401</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="https://www.facebook.com/dewa.studetroy.1"><img src="img/facebook.png" /></a></li>
+                            <li><a href="https://www.facebook.com/dewa.studetroy.1">Dewa Dsc</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="DSC-Tech.blogspot.com"><img src="img/blogger.png" /></a></li>
+                            <li><a href="DSC-Tech.blogspot.com">DSC-Tech</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            function btnPesan() {
+                alert("Btw yang form contact us cuma formalitas aja ey :v")
+            }
+
+            function navBar() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+
+            function reveal() {
+                var reveals = document.querySelectorAll(".reveal");
+
+                for (var i = 0; i < reveals.length; i++) {
+                    var windowHeight = window.innerHeight;
+                    var elementTop = reveals[i].getBoundingClientRect().top;
+                    var elementVisible = 150;
+
+                    if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                    } else {
+                    reveals[i].classList.remove("active");
+                    }
+                }
+            }
+
+            window.addEventListener("scroll", reveal);
+        </script>
+    </body>
+</html>

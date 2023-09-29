@@ -1,0 +1,140 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title{
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    z-index: 1;
+    display: block;
+    position: absolute;
+    background-color: #444444;
+    color: white;
+   margin: 0;
+}
+
+.entry-modal{
+    width: 600px;
+    z-index: 9999;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    padding: 5px;
+    color: #fff;
+    background-color: #eaeaea;
+    text-align: center;
+}
+
+.entry-modal p {
+    color: #000;
+    font-size: 25px;
+}
+
+#notification{
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    color: #f2f2f2;
+    margin: 0;
+    top: 47.33px;
+    font-size: 18pt;
+    width: 100%;
+    background-color: #81d4f4;
+}
+
+.room-input {
+  border: none;
+  padding: 5px;
+  font-size: 15px;
+  outline: none;
+  width: 150px;
+  text-align: center;
+  border-radius: 5px;
+  transition: 0.25s;
+}
+
+.room-input:hover {
+    width: 250px;
+}
+
+.tombol-meet {
+    margin-top: 20;
+    margin-bottom: 30;
+    padding: 7px;
+    width: 150px;
+    outline: none;
+    font-size: 15px;
+    border: 0;
+    background-color: #81d4f4;
+    color: #f2f2f2;
+    opacity: 75%;
+    border-radius: 5px;
+    transition: 0.25s;
+}
+
+.tombol-meet:hover {
+    cursor: pointer;
+    opacity: 100%;
+}
+
+#remote-video{
+    top: 0;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color: #f2f2f2;
+    position: absolute;
+}
+
+#local-video{
+    top: 10;
+    width: 300;
+    object-fit: cover;
+    height: 150;
+    z-index: 1;
+    right: 10;
+    border-radius: 5px;
+    background-color: #81d4f4;
+    position: absolute;
+}
+
+.meet-controls-bar{
+    bottom: 0;
+    background-color: #eaeaea;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 5%;
+}
+
+.tombol-share-screen {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+    width: 150px;
+    outline: none;
+    font-size: 15px;
+    border: 0;
+    background-color: #81d4f4;
+    color: #f2f2f2;
+    opacity: 75%;
+    border-radius: 5px;
+    transition: 0.25s;
+}
+
+.tombol-share-screen:hover {
+    opacity: 100%;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 620px) {
+    .entry-modal {
+        width: 350px;
+    }
+}
